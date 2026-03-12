@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibu Restaurant - Our Story & Gallery</title>
+    <link rel="stylesheet" href="icon.css">
+</head>
+<style>
+    body {
+        background-color: green;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header-section {
+        text-align: center;
+        background-color: limegreen;
+        padding: 20px;
+        border: 5px yellow solid;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .gallery-section {
+        background-color: limegreen;
+        padding: 20px;
+        border: 5px yellow solid;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .links-section {
+        background-color: limegreen;
+        padding: 20px;
+        border: 5px yellow solid;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .icons-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .icon-item {
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        background-color: yellow;
+        border-radius: 15px;
+        border: 3px navy solid;
+        transition: transform 0.3s;
+    }
+    .icon-item:hover {
+        transform: scale(1.2) rotate(10deg);
+        cursor: pointer;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .gallery-item {
+        text-align: center;
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 10px;
+        border: 3px navy solid;
+    }
+    .link-button {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        background-color: yellow;
+        color: navy;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 3px navy solid;
+        transition: all 0.3s;
+    }
+    .link-button:hover {
+        background-color: navy;
+        color: yellow;
+        transform: scale(1.1);
+    }
+    .about-text {
+        text-align: center;
+        color: navy;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .emoji-title {
+        font-size: 40px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section with Playful Icons -->
+        <div class="header-section">
+            <h1>🍽️ Welcome to Karibu Restaurant! 🍽️</h1>
+            <h3 class="yellow">Our Story & Photo Gallery</h3>
+            <p class="about-text">
+                At Karibu Restaurant, we believe every meal should be a celebration! 🎉<br>
+                Since opening our doors, we've been serving smiles along with our delicious meals. 
+                Our chefs put love and passion into every dish they prepare. ❤️
+            </p>
+        </div>
+
+        <!-- Playful Icons Section -->
+        <div class="section">
+            <h3 class="yellow">🎈 What Makes Us Special 🎈</h3>
+            <div class="icons-row">
+                <div class="icon-item" title="Fresh Ingredients">🥗</div>
+                <div class="icon-item" title="Great Service">👨‍🍳</div>
+                <div class="icon-item" title="Fast Delivery">🚗</div>
+                <div class="icon-item" title="Happy Customers">😊</div>
+                <div class="icon-item" title="Best Prices">💰</div>
+                <div class="icon-item" title="Clean Environment">✨</div>
+            </div>
+        </div>
+
+        <!-- Gallery Section with Images -->
+        <div class="gallery-section">
+            <h3 class="yellow">📸 Our Photo Gallery 📸</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="200" height="150" alt="Restaurant Image">
+                    <p>🍜 Our Beautiful Restaurant</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="200" height="150" alt="Food Image">
+                    <p>🍛 Delicious Dishes</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="200" height="150" alt="Chef Image">
+                    <p>👨‍🍳 Our Talented Chefs</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="200" height="150" alt="Happy Customers">
+                    <p>🎉 Happy Customers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Playful Icons -->
+        <div class="section">
+            <h3 class="yellow">🌟 Our Services 🌟</h3>
+            <div class="icons-row">
+                <div class="icon-item" title="Dine In">🍽️</div>
+                <div class="icon-item" title="Take Away">🥡</div>
+                <div class="icon-item" title="Catering">🎊</div>
+                <div class="icon-item" title="Events">🎂</div>
+                <div class="icon-item" title="Birthday Parties">🎈</div>
+                <div class="icon-item" title="Private Parties">🥂</div>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-section">
+            <h3 class="yellow">🔗 Quick Links 🔗</h3>
+            <a href="index.html" class="link-button">🏠 Home Page</a>
+            <a href="Services.html" class="link-button">🛎️ Our Services</a>
+            <a href="order.html" class="link-button">🛒 Place Order</a>
+            
+            <div style="margin-top: 30px;">
+                <h3 class="green">📞 Contact Us 📞</h3>
+                <p style="color: navy; font-size: 18px;">
+                    📍 Location: Nairobi, Kenya <br>
+                    📞 Phone: +254 700 000000 <br>
+                    📧 Email: info@kariburestaurant.com <br>
+                    🕐 Open Daily: 8:00 AM - 10:00 PM
+                </p>
+            </div>
+        </div>
+
+        <!-- Fun Footer Section -->
+        <div class="section" style="text-align: center;">
+            <h3 class="yellow">😄 Thank You for Visiting! 😄</h3>
+            <div class="icons-row">
+                <div class="icon-item" title="Love">❤️</div>
+                <div class="icon-item" title="Star">⭐</div>
+                <div class="icon-item" title="Thumbs Up">👍</div>
+                <div class="icon-item" title="Fire">🔥</div>
+            </div>
+            <p style="color: navy; font-size: 16px;">
+                We look forward to serving you soon! Come hungry, leave happy! 🍽️✨
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive behavior to icons
+        document.querySelectorAll('.icon-item').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const title = this.getAttribute('title');
+                alert('🎉 ' + title + ' - Learn more about this on our Services page!');
+            });
+        });
+
+        // Add animation when page loads
+        window.addEventListener('load', function() {
+            document.querySelector('.container').style.animation = 'fadeIn 0.5s';
+        });
+    </script>
+</body>
+</html>

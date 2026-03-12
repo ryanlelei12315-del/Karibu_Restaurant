@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibu Restaurant - Order & Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: ;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: navy;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid navy;
+            padding-bottom: 10px;
+        }
+        .menu-section, .feedback-section {
+            margin-bottom: 40px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .menu-item:hover {
+            background-color: #e8f4e8;
+        }
+        .item-info {
+            flex: 1;
+        }
+        .item-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        .item-description {
+            color: #666;
+            font-size: 14px;
+        }
+        .item-price {
+            color: navy;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .quantity-btn:hover {
+            background-color: darkblue;
+        }
+        .quantity {
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }
+        .order-summary {
+            background-color: #e8f4e8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+            color: navy;
+            text-align: right;
+            margin-top: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: green;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: darkgreen;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: navy;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .rating {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .rating label {
+            cursor: pointer;
+        }
+        .rating input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h1>Karibu Restaurant</h1>
+        
+        <!-- Order Section -->
+        <div class="menu-section">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Your Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address:</label>
+                    <input type="text" id="deliveryAddress" name="deliveryAddress" required>
+                </div>
+                
+                <h3>Select Items</h3>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Ugali & Sukuma</div>
+                        <div class="item-description">Ugali served with fried sukuma wiki</div>
+                        <div class="item-price">Ksh 150</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('ugali', -1)">-</button>
+                        <span class="quantity" id="qty-ugali">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('ugali', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Pilau</div>
+                        <div class="item-description">Spiced rice cooked with beef</div>
+                        <div class="item-price">Ksh 300</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('pilau', -1)">-</button>
+                        <span class="quantity" id="qty-pilau">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('pilau', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Chicken & Chips</div>
+                        <div class="item-description">Fried chicken served with french fries</div>
+                        <div class="item-price">Ksh 450</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('chicken', -1)">-</button>
+                        <span class="quantity" id="qty-chicken">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('chicken', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Chapati & Beans</div>
+                        <div class="item-description">Soft chapati served with stewed beans</div>
+                        <div class="item-price">Ksh 200</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('chapati', -1)">-</button>
+                        <span class="quantity" id="qty-chapati">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('chapati', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Mandazi</div>
+                        <div class="item-description">Sweet fried dough balls</div>
+                        <div class="item-price">Ksh 50</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('mandazi', -1)">-</button>
+                        <span class="quantity" id="qty-mandazi">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('mandazi', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Soda</div>
+                        <div class="item-description">Coca Cola, Fanta, Sprite</div>
+                        <div class="item-price">Ksh 100</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('soda', -1)">-</button>
+                        <span class="quantity" id="qty-soda">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('soda', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Tea</div>
+                        <div class="item-description">Hot tea</div>
+                        <div class="item-price">Ksh 50</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('tea', -1)">-</button>
+                        <span class="quantity" id="qty-tea">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('tea', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Coffee</div>
+                        <div class="item-description">Hot coffee</div>
+                        <div class="item-price">Ksh 50</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('coffee', -1)">-</button>
+                        <span class="quantity" id="qty-coffee">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('coffee', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-info">
+                        <div class="item-name">Juice</div>
+                        <div class="item-description">Fresh juice</div>
+                        <div class="item-price">Ksh 100</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('juice', -1)">-</button>
+                        <span class="quantity" id="qty-juice">0</span>
+                        <button type="button" class="quantity-btn" onclick="changeQuantity('juice', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="orderDetails">No items selected</div>
+                    <div class="total">Total: Ksh <span id="totalAmount">0</span></div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+        
+        <!-- Feedback Section -->
+        <div class="feedback-section">
+            <h2>Submit Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Your Name:</label>
+                    <input type="text" id="feedbackName" name="feedbackName" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackEmail">Email:</label>
+                    <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Rating:</label>
+                    <div class="rating">
+                        <label><input type="radio" name="rating" value="5" required> 5 - Excellent</label>
+                        <label><input type="radio" name="rating" value="4"> 4 - Very Good</label>
+                        <label><input type="radio" name="rating" value="3"> 3 - Good</label>
+                        <label><input type="radio" name="rating" value="2"> 2 - Fair</label>
+                        <label><input type="radio" name="rating" value="1"> 1 - Poor</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Service Type:</label>
+                    <select id="serviceType" name="serviceType">
+                        <option value="dine-in">Dine-in</option>
+                        <option value="takeout">Takeout</option>
+                        <option value="delivery">Delivery</option>
+                        <option value="catering">Catering</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" placeholder="Tell us about your experience..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Menu prices
+        const prices = {
+            ugali: 150,
+            pilau: 300,
+            chicken: 450,
+            chapati: 200,
+            mandazi: 50,
+            soda: 100,
+            tea: 50,
+            coffee: 50,
+            juice: 100
+        };
+        
+        // Quantities
+        const quantities = {
+            ugali: 0,
+            pilau: 0,
+            chicken: 0,
+            chapati: 0,
+            mandazi: 0,
+            soda: 0,
+            tea: 0,
+            coffee: 0,
+            juice: 0
+        };
+        
+        // Item names for display
+        const itemNames = {
+            ugali: 'Ugali & Sukuma',
+            pilau: 'Pilau',
+            chicken: 'Chicken & Chips',
+            chapati: 'Chapati & Beans',
+            mandazi: 'Mandazi',
+            soda: 'Soda',
+            tea: 'Tea',
+            coffee: 'Coffee',
+            juice: 'Juice'
+        };
+        
+        // Change quantity
+        function changeQuantity(item, delta) {
+            quantities[item] += delta;
+            if (quantities[item] < 0) quantities[item] = 0;
+            document.getElementById('qty-' + item).textContent = quantities[item];
+            updateOrderSummary();
+        }
+        
+        // Update order summary
+        function updateOrderSummary() {
+            let total = 0;
+            let details = [];
+            
+            for (const item in quantities) {
+                if (quantities[item] > 0) {
+                    const subtotal = quantities[item] * prices[item];
+                    details.push(itemNames[item] + ' x ' + quantities[item] + ' = Ksh ' + subtotal);
+                    total += subtotal;
+                }
+            }
+            
+            if (details.length === 0) {
+                document.getElementById('orderDetails').textContent = 'No items selected';
+            } else {
+                document.getElementById('orderDetails').innerHTML = details.join('<br>');
+            }
+            
+            document.getElementById('totalAmount').textContent = total;
+        }
+        
+        // Handle order form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('deliveryAddress').value;
+            
+            let totalItems = 0;
+            for (const item in quantities) {
+                totalItems += quantities[item];
+            }
+            
+            if (totalItems === 0) {
+                alert('Please select at least one item.');
+                return;
+            }
+            
+            const total = document.getElementById('totalAmount').textContent;
+            
+            alert('Thank you for your order, ' + name + '!\n\n' +
+                  'Total: Ksh ' + total + '\n' +
+                  'We will contact you at ' + phone + '\n' +
+                  'Delivery address: ' + address + '\n\n' +
+                  'Your order has been received and will be prepared shortly.');
+            
+            // Reset form
+            this.reset();
+            for (const item in quantities) {
+                quantities[item] = 0;
+                document.getElementById('qty-' + item).textContent = 0;
+            }
+            updateOrderSummary();
+        });
+        
+        // Handle feedback form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('feedbackName').value;
+            const rating = document.querySelector('input[name="rating"]:checked').value;
+            const feedback = document.getElementById('feedback').value;
+            
+            let ratingText = '';
+            switch(rating) {
+                case '5': ratingText = 'Excellent'; break;
+                case '4': ratingText = 'Very Good'; break;
+                case '3': ratingText = 'Good'; break;
+                case '2': ratingText = 'Fair'; break;
+                case '1': ratingText = 'Poor'; break;
+            }
+            
+            alert('Thank you for your feedback, ' + name + '!\n\n' +
+                  'Rating: ' + rating + '/5 (' + ratingText + ')\n\n' +
+                  'We appreciate your input and will use it to improve our service.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,28 +1,51 @@
-<h1>Karibu Restaurant </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibu Restaurant</title>
+    <link rel="stylesheet" href="icon.css">
+</head>
+<style>
+    body{background-color:beige}
+</style>
+<body text-align:center;>
+    <div>
+        <h1 style="color:navy;font-size:50px;font-weight:400px;text-align:center;">Karibu Restaurant</h1>
+        <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="500" height="300" alt="restaurant image";text-align:center;>
+        <p style="text-align:center;">Welcome to Karibu Restaurant. We serve delicious meals prepared with fresh ingredients. Our menu includes traditional and modern dishes for everyone to enjoy.</p>
+        <h3 style="color:navy;font-size:30px;text-align: center;">Our Menu</h3>
+        <table style="background-color:steelblue" border="1">
+            <tr style="background-color: yellow;color: green;">
+                <th>prepare yourselves for a feast of your choice</th><br>
+               
+<h1>Karibu Restaurant Services</h1>
 <p>Welcome to our services! We offer a wide range of culinary delights and exceptional dining experiences.</p>
 <img src="5359 Mgr in DiningRm RT (1).jpg" width="500" height="300" alt="restaurant image">
-<h2>Our Services</h2>
-<select name="options" id="services"my dropdown>
-    <option value="private dining">Private Dining</option>
-    <option value="catering">Catering</option>
-    <option value="event planning">Event Planning</option>
-    <option value="takeout and delivery">Takeout and Delivery</option>
-    <option value="online ordering">Online Ordering</option>
-    <option value="home delivery">Home Delivery</option>
-    <option value="corporate events">Corporate Events</option>
-</select>
-<ul>
-    <li>Private Dining</li>
-    <li>Catering</li>
-    <li>Event Planning</li>
-    <li>Takeout and Delivery</li>
-    <li>Online Ordering</li>
-    <li>Home Delivery</li>
-    <li>Corporate Events</li>
-</ul>
-
 <div>
-    <h3>Private Dining</h3>
+    <h3 class="green">Our Services</h3>
+    <select name="options" id="services"my dropdown>
+        <option value="private dining">Private Dining</option>
+        <option value="catering">Catering</option>
+        <option value="event planning">Event Planning</option>
+        <option value="takeout and delivery">Takeout and Delivery</option>
+        <option value="online ordering">Online Ordering</option>
+        <option value="home delivery">Home Delivery</option>
+        <option value="corporate events">Corporate Events</option>
+    </select>
+    <ul>
+        <li>Private Dining</li>
+        <li>Catering</li>
+        <li>Event Planning</li>
+        <li>Takeout and Delivery</li>
+        <li>Online Ordering</li>
+        <li>Home Delivery</li>
+        <li>Corporate Events</li>
+    </ul>
+</div>
+<hr>
+<div>
+    <h3 class="green">Private Dining</h3>
     <p>Experience the elegance of our private dining rooms, perfect for intimate gatherings and special occasions. 
 Our team will work with you to create a personalized menu and ensure a memorable dining experience.</p>
     </p>
@@ -36,47 +59,75 @@ Our team will work with you to create a personalized menu and ensure a memorable
     <input type="email" id="email" name="email"><br>
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password"><br>
-    <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+    <input type="submit" value="Submit" onclick="handleOrder(event)" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
 </forms>
-<h3>Contact Us</h3>
+<h3 class="yellow">Contact Us</h3>
 <p>For inquiries and reservations, please contact us <at:a href="mailto:info@kariburestaurant.com">here</at:a></p>
 <footer>
     <p>&copy; 2024 Karibu Restaurant. All rights reserved.</p>
 </footer>
 q
-    <h2>Customer Satisfaction Questionnaire</h2>
-    <form action="/submit-questionnaire" method="post">
+    <section style = "background-color: rgb(red, green, blue) ;">
+        <h2 syle="font-size 400px">Customer Satisfaction Questionnaire</h2>
+        
+            <form action="/submit-questionnaire" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit" onclick="handleQuestionnaire(event)">
+            </form>
+            <select name="options" id="services"my dropdown>
+                <option value="private dining">Private Dining</option>
+                <option value="catering">Catering</option>
+                <option value="event planning">Event Planning</option>
+                <option value="takeout and delivery">Takeout and Delivery</option>
+                <option value="online ordering">Online Ordering</option>
+                <option value="home delivery">Home Delivery</option>
+                <option value="corporate events">Corporate Events</option>
+            </select>
+        
+    </section>
 
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <label for="feedback">Feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
-    <select name="options" id="services"my dropdown>
-        <option value="private dining">Private Dining</option>
-        <option value="catering">Catering</option>
-        <option value="event planning">Event Planning</option>
-        <option value="takeout and delivery">Takeout and Delivery</option>
-        <option value="online ordering">Online Ordering</option>
-        <option value="home delivery">Home Delivery</option>
-        <option value="corporate events">Corporate Events</option>
-    </select>
-
-    <h3>Contact Us</h3>
+    <h3 class="yellow">Contact Us</h3>
     <p>For inquiries and reservations, please contact us <at:a href="mailto:info@kariburestaurant.com">here</at:a></p>
     <footer>
         <p>&copy; 2024 Karibu Restaurant. All rights reserved.</p>
     </footer>
     <div>
-        
-        <a href="index.html" target="_blank">Back to Home page
-        </a>
+        <a href="index.html" target="_blank">Back to Home page</a>
+        <br><br>
+        <a href="order.html">Place Order & Submit Feedback</a>
     </div>
+    <p>find us on social media</p>
+   <select> name="social media" id="social media">
+        <option value="facebook">Facebook</option>
+        <option value="twitter">Twitter</option>
+        <option value="instagram">Instagram</option>
+        <option value="linkedin">LinkedIn</option>
+    </select><br>
+    <p>click here to visit our website</p>
+    <button onclick="visitWebsite()">click here</button>
+    <script>
+        function handleOrder(event) {
+            event.preventDefault();
+            alert('Thank you for your order! We will confirm it via email.');
+        }
+        
+        function handleQuestionnaire(event) {
+            event.preventDefault();
+            alert('Thank you for your feedback! We value your input.');
+        }
+        
+        function visitWebsite() {
+            alert('Redirecting to our website...');
+            window.open('https://www.kariburestaurant.com', '_blank');
+        }
+    </script>
 </body>
 </html>  
 
