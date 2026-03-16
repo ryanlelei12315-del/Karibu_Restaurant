@@ -9,6 +9,7 @@ img{
     opacity: 0.6;
     transition: opacity 0.3s ease;
     text-align: center;
+    display: block;
 }
 h3{
     font-size: 30px;
@@ -38,7 +39,7 @@ h3{
     text-align: left;
 }
 body{
-    background-color: green;
+    background-color: auto;
     border: 5px yellow solid;
     padding: 10px;
 }
