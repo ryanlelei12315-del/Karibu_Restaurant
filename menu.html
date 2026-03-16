@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibu Restaurant - Our Menu</title>
+    <link rel="stylesheet" href="external.css">
+    <style>
+        /* Ordered List Menu Styles */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-list li {
+            background: #f5f5f5;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #1a472a;
+        }
+        
+        .menu-list .item-info {
+            flex: 1;
+        }
+        
+        .menu-list .item-info h4 {
+            color: #1a472a;
+            margin: 0 0 5px;
+            font-size: 17px;
+        }
+        
+        .menu-list .item-info p {
+            color: #666;
+            margin: 0;
+            font-size: 13px;
+        }
+        
+        .menu-list .price {
+            background: #1a472a;
+            color: #f4d03f;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 15px;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        
+        .menu-list .tag {
+            background: #1a472a;
+            color: #f4d03f;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .menu-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .menu-list .price {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Our Menu</h1>
+            <p>Fresh Ingredients • Expertly Prepared • Served with Love</p>
+        </div>
+
+        <!-- African Cuisine -->
+        <div class="section">
+            <h2>African Delicacies</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Ugali & Sukuma <span class="tag">Popular</span></h4>
+                        <p>Traditional maize porridge with fried vegetables</p>
+                    </div>
+                    <span class="price">Ksh 150</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Pilau <span class="tag">Popular</span></h4>
+                        <p>Fragrant spiced rice with tender beef</p>
+                    </div>
+                    <span class="price">Ksh 300</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Chapati & Beans</h4>
+                        <p>Soft layered chapati with stewed beans</p>
+                    </div>
+                    <span class="price">Ksh 200</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Nyama Choma</h4>
+                        <p>Grilled seasoned beef with sides</p>
+                    </div>
+                    <span class="price">Ksh 400</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Fish Ugali</h4>
+                        <p>Fresh tilapia with ugali and vegetables</p>
+                    </div>
+                    <span class="price">Ksh 450</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Chinese Cuisine -->
+        <div class="section">
+            <h2>Chinese Cuisine</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Sweet & Sour Pork <span class="tag">Popular</span></h4>
+                        <p>Crispy pork in tangy sauce with peppers</p>
+                    </div>
+                    <span class="price">Ksh 550</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Chicken Chow Mein</h4>
+                        <p>Stir-fried noodles with chicken & vegetables</p>
+                    </div>
+                    <span class="price">Ksh 480</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Kung Pao Chicken</h4>
+                        <p>Spicy chicken with peanuts & chilies</p>
+                    </div>
+                    <span class="price">Ksh 520</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Fried Rice</h4>
+                        <p>Wok-fried rice with egg & vegetables</p>
+                    </div>
+                    <span class="price">Ksh 320</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Italian Cuisine -->
+        <div class="section">
+            <h2>Italian Favorites</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Spaghetti Carbonara <span class="tag">Popular</span></h4>
+                        <p>Creamy pasta with bacon, egg & parmesan</p>
+                    </div>
+                    <span class="price">Ksh 650</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Margherita Pizza</h4>
+                        <p>Classic pizza with tomato, mozzarella & basil</p>
+                    </div>
+                    <span class="price">Ksh 800</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Lasagna</h4>
+                        <p>Layers of pasta, meat sauce & cheese</p>
+                    </div>
+                    <span class="price">Ksh 700</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Tiramisu</h4>
+                        <p>Classic Italian dessert with coffee</p>
+                    </div>
+                    <span class="price">Ksh 300</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Indian Cuisine -->
+        <div class="section">
+            <h2>Indian Delights</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Chicken Biryani <span class="tag">Popular</span></h4>
+                        <p>Fragrant rice with spiced chicken & saffron</p>
+                    </div>
+                    <span class="price">Ksh 550</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Butter Chicken</h4>
+                        <p>Tender chicken in creamy tomato sauce</p>
+                    </div>
+                    <span class="price">Ksh 600</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Garlic Naan</h4>
+                        <p>Soft bread topped with garlic & butter</p>
+                    </div>
+                    <span class="price">Ksh 120</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Palak Paneer</h4>
+                        <p>Cottage cheese in creamy spinach gravy</p>
+                    </div>
+                    <span class="price">Ksh 400</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- American Cuisine -->
+        <div class="section">
+            <h2>American Classics</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Classic Cheeseburger <span class="tag">Popular</span></h4>
+                        <p>Juicy patty with cheese, lettuce & tomato</p>
+                    </div>
+                    <span class="price">Ksh 450</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Chicken & Chips</h4>
+                        <p>Crispy fried chicken with french fries</p>
+                    </div>
+                    <span class="price">Ksh 450</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Pepperoni Pizza</h4>
+                        <p>Loaded pizza with pepperoni & mozzarella</p>
+                    </div>
+                    <span class="price">Ksh 900</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Mac & Cheese</h4>
+                        <p>Creamy macaroni with three cheeses</p>
+                    </div>
+                    <span class="price">Ksh 380</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Beverages -->
+        <div class="section">
+            <h2>Beverages</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Fresh Juice</h4>
+                        <p>Mango, Orange, Pineapple - made fresh daily</p>
+                    </div>
+                    <span class="price">Ksh 150</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Smoothies</h4>
+                        <p>Strawberry, Banana, Mixed Berry - thick & creamy</p>
+                    </div>
+                    <span class="price">Ksh 250</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Tea & Coffee</h4>
+                        <p>Black, Green, Masala Tea, Espresso, Cappuccino</p>
+                    </div>
+                    <span class="price">Ksh 100</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Milkshakes</h4>
+                        <p>Chocolate, Vanilla, Strawberry, Banana</p>
+                    </div>
+                    <span class="price">Ksh 280</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Desserts -->
+        <div class="section">
+            <h2>Desserts</h2>
+            <ol class="menu-list">
+                <li>
+                    <div class="item-info">
+                        <h4>Ice Cream</h4>
+                        <p>Vanilla, Chocolate, Strawberry, Mango</p>
+                    </div>
+                    <span class="price">Ksh 200</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Cupcakes</h4>
+                        <p>Chocolate, Vanilla, Red Velvet - freshly baked</p>
+                    </div>
+                    <span class="price">Ksh 180</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Mandazi</h4>
+                        <p>Traditional African sweet doughnuts</p>
+                    </div>
+                    <span class="price">Ksh 50</span>
+                </li>
+                <li>
+                    <div class="item-info">
+                        <h4>Chocolate Cake</h4>
+                        <p>Rich chocolate layers with frosting</p>
+                    </div>
+                    <span class="price">Ksh 250</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h3>Visit Us Today!</h3>
+            <p>Open Daily: 7:00 AM - 10:00 PM • Phone: +254 700 000 000</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="order.html">Order</a>
+        </div>
+    </div>
+</body>
+</html>

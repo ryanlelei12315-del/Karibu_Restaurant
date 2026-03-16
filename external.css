@@ -1,0 +1,160 @@
+/* ===================================
+   Karibu Restaurant - Menu Styles
+   =================================== */
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background: darkgreen;
+    color: #fff;
+    border: #f5f5f5 solid 5px;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #2d5a3d, #1a472a);
+    padding: 30px;
+    border: 3px solid #f4d03f;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: #f4d03f;
+    font-size: 38px;
+    margin: 0 0 10px;
+}
+
+.header p {
+    color: #fff;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Menu Section */
+.section {
+    background: #054205;
+    padding: 25px;
+    border: 2px solid #f4d03f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #f4d03f;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #f4d03f;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+/* Menu Item */
+.item {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #1a472a;
+}
+
+.item h4 {
+    color: #1a472a;
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.item p {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 10px;
+}
+
+/* Price & Tags */
+.price {
+    background: #1a472a;
+    color: #f4d03f;
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tag {
+    background: #c0392b;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #2d5a3d;
+    border: 2px solid #f4d03f;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.footer h3 {
+    color: #f4d03f;
+    margin: 0 0 10px;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Navigation */
+.nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 5px;
+    background: #f4d03f;
+    color: #1a472a;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: #1a472a;
+    color: #f4d03f;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -38,8 +38,8 @@ h3{
     text-align: left;
 }
 body{
-    background-color: aquamarine;
-    border: 5px white solid;
+    background-color: green;
+    border: 5px yellow solid;
     padding: 10px;
 }
 .reservation{
@@ -51,3 +51,179 @@ body{
     margin-bottom: 10px;
     border-color: aliceblue;
 }
+.navbar{
+    background-color: 
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.forms{
+    background-color: limegreen;
+    padding: auto;
+    border: 20px yellow solid;
+    border-radius: 10px;
+    padding-right: auto;
+    padding-left: 20px;
+}
+
+}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: green;
+        font-family: 'Georgia', 'Times New Roman', serif;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        background-color: limegreen;
+    }
+    .menu-header {
+        text-align: center;
+        background: linear-gradient(135deg, #2d5a3d 0%, #1a472a 100%);
+        padding: 40px 30px;
+        border: 3px solid #f4d03f;
+        border-radius: 10px;
+        margin-bottom: 40px;
+    }
+    .menu-header h1 {
+        color: yellow;
+        font-size: 42px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    .menu-header p {
+        color: white;
+        font-size: 18px;
+        font-style: italic;
+    }
+    .menu-header .tagline {
+        color: yellow;
+        font-size: 16px;
+        margin-top: 15px;
+        font-style: normal;
+    }
+    .cuisine-section {
+        background-color: rgb(4, 48, 4);
+        padding: 30px;
+        border: 3px solid #f4d03f;
+        border-radius: 10px;
+        margin-bottom: 35px;
+    }
+    .cuisine-title {
+        color: yellow;
+        font-size: 28px;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+        border-bottom: 2px dashed #f4d03f;
+        font-weight: normal;
+    }
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    .menu-item {
+        background-color: #f9f9f9;
+        border: 2px solid #1a472a;
+        border-radius: 8px;
+        padding: 18px;
+        transition: all 0.3s ease;
+    }
+    .menu-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .menu-item h4 {
+        color: #1a472a;
+        font-size: 17px;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    .menu-item p {
+        color: #555;
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    .price {
+        display: inline-block;
+        background-color: #1a472a;
+        color: #f4d03f;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .popular-tag {
+        background-color: #c0392b;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 10px;
+        font-size: 10px;
+        margin-left: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .navigation-links {
+        text-align: center;
+        margin-top: 40px;
+        padding: 25px;
+    }
+    .nav-btn {
+        display: inline-block;
+        padding: 12px 28px;
+        margin: 8px;
+        background-color: #f4d03f;
+        color: #1a472a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 25px;
+        border: 2px solid #1a472a;
+        transition: all 0.3s;
+    }
+    .nav-btn:hover {
+        background-color: #1a472a;
+        color: #f4d03f;
+    }
+    .footer-msg {
+        text-align: center;
+        padding: 30px;
+        background-color: #2d5a3d;
+        border: 3px solid #f4d03f;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .footer-msg h3 {
+        color: #f4d03f;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    .footer-msg p {
+        color: #e8e8e8;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .footer-msg .contact-info {
+        margin-top: 20px;
+        color: #f4d03f;
+    }
+    @media (max-width: 768px) {
+        .menu-header h1 {
+            font-size: 30px;
+        }
+        .cuisine-title {
+            font-size: 22px;
+        }
+        .menu-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
