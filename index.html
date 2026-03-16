@@ -4,127 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karibu Restaurant</title>
-    <link rel="stylesheet" href="icon.css">
+    <img src="ChatGPT Image Mar 16, 2026, 06_22_28 PM.png" alt="restaurant image" width="100%" height="600">
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body{background-color:green}
-</style>
 <body>
-    <div>
-        <h1 style="color:navy;font-size:50px;font-weight:400px;text-align:center;">Karibu Restaurant</h1>
-        <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="500" height="300" alt="restaurant image">
-        <p style="text-align:center;">Welcome to Karibu Restaurant. We serve delicious meals prepared with fresh ingredients. Our menu includes traditional and modern dishes for everyone to enjoy.</p>
-        <h3 style="color:navy;font-size:30px;text-align: center;">Our Menu</h3>
-        <table id="menu-table">
-            <tr style="background-color: yellow;">
-                <th>Meal</th>
-                <th>Description</th>
-                <th>Price (Ksh)</th>
-            </tr>
-            <tr>
-                <td>Ugali & Sukuma</td>
-                <td>Ugali served with fried sukuma wiki</td>
-                <td>150</td>
-            </tr>
-            <tr>
-                <td>Pilau</td>
-                <td>Spiced rice cooked with beef</td>
-                <td>300</td>
-            </tr>
-            <tr>
-                <td>Chicken & Chips</td>
-                <td>Fried chicken served with french fries</td>
-                <td>450</td>
-            </tr>
-            <tr>
-                <td>Chapati & Beans</td>
-                <td>Soft chapati served with stewed beans</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Mandazi</td>
-                <td>Sweet fried dough balls</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Soda</td>
-                <td>Coca Cola, Fanta, Sprite</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Tea</td>
-                <td>Hot tea</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Coffee</td>
-                <td>Hot coffee</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Juice</td>
-                <td>Fresh juice</td>
-                <td>100</td>
-            </tr>
-        </table>
-        </div>
+    <div class="container">
+        <nav class="bar">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="Services.html">Services</a>
+        </nav>
         <div>
-        <h3 class=yellow ;style="color:navy;font-weight: 900px;font-size:30px;text-align: center;border: 1px solid black;">Popular Items</h3>
-        <ol border="1";>
-            <li>Pilau</li>
-            <li>Chicken & Chips</li>
-            <li>Ugali & Sukuma</li>
-            <li>Chapati & Beans</li>
-        </ol>
-        <h3 style="color:navy;font-weight: 900px;font-size:30px;text-align: center;">Customer Login</h3>
-        <form action style="background-color:greenyellow">
-            <input type="text" placeholder="Username"><br>
-            <label for="username">Username:</label><br>
-            <input type="password" placeholder="Password"><br>
-            <label for="password">Password:</label><br>
-            <input type="submit" value="Login" style="background-color:blue;color:white;" onclick="handleLogin(event)"><br>
-        </form style="background-color:greenyellow">
-        <h3 class=reservation style="color:navy;font-weight: 900px;font-size:30px;text-align: center;">Make a Reservation</h3>
-        <form action class="reservation" style="background-color: beige;">
-             <label for="name">Name:</label><br>
-            <input type="text" placeholder=""><br>
-            <label for="email">Email:</label><br>
-            <input type="email" placeholder=""><br>
-            <label for="guests">Number of Guests:</label><br>
-            <input type="number" placeholder=""><br>
-            <label for="date">Date:</label><br>
-            <input type="date" placeholder=""><br>
-            <input type="submit" value="Make Reservation" style="background-color:blue;color:white;" onclick="handleReservation(event)"><br>
-        </form>
-        <style>
-            .reservation {
-                background-color: beige;
-                padding: 15px;
-                border-radius: 10px;
-                border: 3px navy solid;
-                margin: 20px yellow
+            <h1 style="color:navy;font-size:50px;font-weight:400px;text-align:center;">Karibu Restaurant</h1>
+            <img src="WhatsApp Image 2026-03-09 at 11.03.46 AM.jpeg" width="500" height="300" alt="restaurant image">
+            <p style="text-align:center;">Welcome to Karibu Restaurant. We serve delicious meals prepared with fresh ingredients. Our menu includes traditional and modern dishes for everyone to enjoy.</p>
+            <h3 style="color:navy;font-size:30px;text-align: center;">Our Menu</h3>
+            <table id="menu-table">
+                <tr style="background-color: yellow;">
+                    <th>Meal</th>
+                    <th>Description</th>
+                    <th>Price (Ksh)</th>
+                </tr>
+                <tr>
+                    <td>Ugali & Sukuma</td>
+                    <td>Ugali served with fried sukuma wiki</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>Pilau</td>
+                    <td>Spiced rice cooked with beef</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Chicken & Chips</td>
+                    <td>Fried chicken served with french fries</td>
+                    <td>450</td>
+                </tr>
+                <tr>
+                    <td>Chapati & Beans</td>
+                    <td>Soft chapati served with stewed beans</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Mandazi</td>
+                    <td>Sweet fried dough balls</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Soda</td>
+                    <td>Coca Cola, Fanta, Sprite</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td>Hot tea</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Coffee</td>
+                    <td>Hot coffee</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Juice</td>
+                    <td>Fresh juice</td>
+                    <td>100</td>
+                </tr>
+            </table>
+            </div>
+            <div>
+            <h3 class=yellow ;style="color:navy;font-weight: 900px;font-size:30px;text-align: center;border: 1px solid black;">Popular Items</h3>
+            <ol border="1";>
+                <li>Pilau</li>
+                <li>Chicken & Chips</li>
+                <li>Ugali & Sukuma</li>
+                <li>Chapati & Beans</li>
+            </ol>
+            <h3 style="color:navy;font-weight: 900px;font-size:30px;text-align: center;">Customer Login</h3>
+            <form action style="background-color:greenyellow">
+                <input type="text" placeholder="Username"><br>
+                <label for="username">Username:</label><br>
+                <input type="password" placeholder="Password"><br>
+                <label for="password">Password:</label><br>
+                <input type="submit" value="Login" style="background-color:blue;color:white;" onclick="handleLogin(event)"><br>
+            </form style="background-color:greenyellow">
+            <h3 class=reservation style="color:navy;font-weight: 900px;font-size:30px;text-align: center;">Make a Reservation</h3>
+            <form action class="reservation" style="background-color: beige;">
+                 <label for="name">Name:</label><br>
+                <input type="text" placeholder=""><br>
+                <label for="email">Email:</label><br>
+                <input type="email" placeholder=""><br>
+                <label for="guests">Number of Guests:</label><br>
+                <input type="number" placeholder=""><br>
+                <label for="date">Date:</label><br>
+                <input type="date" placeholder=""><br>
+                <input type="submit" value="Make Reservation" style="background-color:blue;color:white;" onclick="handleReservation(event)"><br>
+            </form>
+            <style>
+                .reservation {
+                    background-color: beige;
+                    padding: 15px;
+                    border-radius: 10px;
+                    border: 3px navy solid;
+                    margin: 20px yellow
+                }
+            </style>
+            <a href="Services.html" target="_blank">View Our Services</a>
+            <br><br>
+            <a href="order.html" target="_blank">Place Order & Submit Feedback</a>
+        </div>
+        <script class="section">
+            function handleLogin(event) {
+                event.preventDefault();
+                const username = document.querySelector('input[type="text"]').value;
+                const password = document.querySelector('input[type="password"]').value;
+                if (username && password) {
+                    alert('Login successful! Welcome, ' + username + '!');
+                } else {
+                    alert('Please enter both username and password.');
+                }
             }
-        </style>
-        <a href="Services.html" target="_blank">View Our Services</a>
-        <br><br>
-        <a href="order.html" target="_blank">Place Order & Submit Feedback</a>
-    </div>
-    <script class="section">
-        function handleLogin(event) {
-            event.preventDefault();
-            const username = document.querySelector('input[type="text"]').value;
-            const password = document.querySelector('input[type="password"]').value;
-            if (username && password) {
-                alert('Login successful! Welcome, ' + username + '!');
-            } else {
-                alert('Please enter both username and password.');
-            }
-        }
         
-        function handleReservation(event) {
-            event.preventDefault();
-            alert('Thank you! Your reservation request has been submitted. We will contact you shortly.');
-        }
-    </script>
+            function handleReservation(event) {
+                event.preventDefault();
+                alert('Thank you! Your reservation request has been submitted. We will contact you shortly.');
+            }
+        </script>
+    </div>
 </body>
 </html>
